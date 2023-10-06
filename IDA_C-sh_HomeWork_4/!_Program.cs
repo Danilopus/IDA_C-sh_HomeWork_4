@@ -109,9 +109,16 @@ namespace IDA_C_sh_HomeWork
 
             void What_Sound(Device obj)
             {
-
+                obj.Sound();
             }
-        
+            void Show(Device obj)
+            {
+                obj.Show();
+            }
+            void Desc(Device obj)
+            { obj.Desc(); }
+
+
         }
         public static void Task_3(string work_name)
         /* Задание 3 
