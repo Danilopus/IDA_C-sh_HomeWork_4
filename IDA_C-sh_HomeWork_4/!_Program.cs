@@ -1,5 +1,6 @@
 ﻿// HomeWork template 1.3 // date: 29.09.2023
 
+using IDA_C_sh_HomeWork_4;
 using Service;
 using System;
 using System.Linq.Expressions;
@@ -102,23 +103,27 @@ namespace IDA_C_sh_HomeWork
         ■ Desc — отображает описание устройства.*/
 
         {
-            Device device_obj = new Device();
+            Console.WriteLine(work_name + "\n");
+
             ElecticPot electicPot_obj = new ElecticPot();
             MicroWaveOven microWaveOven_obj = new MicroWaveOven();
-            Car car = new Car();
+            Car car_obj = new Car();
 
-            void What_Sound(Device obj)
-            {
-                obj.Sound();
-            }
-            void Show(Device obj)
-            {
-                obj.Show();
-            }
-            void Desc(Device obj)
-            { obj.Desc(); }
+            Show(electicPot_obj);
+            Sound(electicPot_obj);
+            Desc(electicPot_obj);
 
+            Show(microWaveOven_obj);
+            Sound(microWaveOven_obj);
+            Desc(microWaveOven_obj);
 
+            Show(car_obj);
+            Sound(car_obj);
+            Desc(car_obj);
+
+            void Sound(Device obj)  { obj.Sound(); }
+            void Show(Device obj)   { obj.Show(); }
+            void Desc(Device obj)   { obj.Desc(); }
         }
         public static void Task_3(string work_name)
         /* Задание 3 
@@ -135,7 +140,42 @@ namespace IDA_C_sh_HomeWork
         мента;
         ■ History — отображае*/
 
-        { }
+        {
+            Console.WriteLine(work_name + "\n");
+
+            Violin violin_obj = new Violin();
+            Violoncello violoncello_obj = new Violoncello();
+            Ukulele ukulele_obj = new Ukulele();
+            Trombon trombon_obj = new Trombon();
+
+            Show(violin_obj);
+            Sound(violin_obj);
+            Desc(violin_obj);
+            History(violin_obj);
+
+            Show(violoncello_obj);
+            Sound(violoncello_obj);
+            Desc(violoncello_obj);
+            History(violoncello_obj);
+
+            Show(ukulele_obj);
+            Sound(ukulele_obj);
+            Desc(ukulele_obj);
+            History(ukulele_obj);
+
+            Show(trombon_obj);
+            Sound(trombon_obj);
+            Desc(trombon_obj);
+            History(trombon_obj);
+
+
+            void Sound(MusicalTool obj) { obj.Sound(); }
+            void Show(MusicalTool obj) { obj.Show(); }
+            void Desc(MusicalTool obj) { obj.Desc(); }
+            void History(MusicalTool obj) { obj.History(); }
+
+
+        }
         public static void Task_4(string work_name)
         /* Задание 4 
          * Создать абстрактный базовый класс Worker (работника)
@@ -144,8 +184,22 @@ namespace IDA_C_sh_HomeWork
         Print() для вывода информации, соответствующей
         каждому типу работника.*/
 
-        { }
-        
+        {
+            Console.WriteLine(work_name + "\n");
+
+            President president_obj = new President();
+            president_obj.Print();
+
+            Security security_obj = new Security();
+            security_obj.Print();
+
+            Manager manager_obj = new Manager();
+            manager_obj.Print();
+
+            Engineer engineer_obj = new Engineer();
+            engineer_obj.Print();
+        }
+
 
     }// class Program
 }// namespace

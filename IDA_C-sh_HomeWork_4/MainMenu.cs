@@ -11,9 +11,9 @@ namespace MainMenu
         List<string>? _menu_elements = new List<string>()
             { "HomeWork 04 : [Inheritance]",
               "Task_1: Money",
-              "Task_2: ",
-              "Task_3: ",
-              "Task_4: "    
+              "Task_2: Device",
+              "Task_3: MusicalTool",
+              "Task_4: Worker manifest"
             };
 
         public void AddElement(string menu_element) { _menu_elements.Add(menu_element); }
